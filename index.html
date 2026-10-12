@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>有限会社ティエムワイ | TMY Co., Ltd.</title>
+<meta name="description" content="有限会社ティエムワイは、1980年よりMultisparesの正規総代理店として、日本国内のメーカーや業者からトラック部品を調達し、オーストラリア・ニュージーランドへ輸出しています。">
+<meta name="robots" content="noindex">
+<link rel="icon" href="img/logo.png" type="image/png">
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --muted: #5b6168;
+    --line: #e3e6ea;
+    --bg: #ffffff;
+    --bg-soft: #f5f7f9;
+    --navy: #1c3f6e;
+    --navy-deep: #12294a;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP", "Segoe UI", sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.8;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--navy); }
+  img { max-width: 100%; height: auto; display: block; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+
+  header {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(255,255,255,.95);
+    border-bottom: 1px solid var(--line);
+    backdrop-filter: blur(6px);
+  }
+  .nav { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--ink); font-weight: 700; letter-spacing: .02em; }
+  .brand img { height: 36px; width: auto; }
+  nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 22px; }
+  nav a { text-decoration: none; color: var(--muted); font-size: 14px; }
+  nav a:hover { color: var(--navy); }
+
+  .hero { background: var(--navy-deep); color: #fff; padding: 72px 0 64px; }
+  .hero .wrap { display: grid; grid-template-columns: 1.1fr .9fr; gap: 40px; align-items: center; }
+  .hero h1 { font-size: 30px; line-height: 1.5; margin: 0 0 18px; font-weight: 700; }
+  .hero p { margin: 0 0 12px; color: #dfe6f0; }
+  .hero .since { display: inline-block; font-size: 13px; letter-spacing: .12em; color: #9fb4d0; margin-bottom: 14px; text-transform: uppercase; }
+  .hero img { border-radius: 6px; box-shadow: 0 10px 30px rgba(0,0,0,.35); }
+
+  section { padding: 64px 0; }
+  section + section { border-top: 1px solid var(--line); }
+  section.soft { background: var(--bg-soft); }
+  h2 { font-size: 22px; margin: 0 0 24px; padding-left: 14px; border-left: 4px solid var(--navy); line-height: 1.4; }
+  h3 { font-size: 17px; margin: 28px 0 10px; }
+  p { margin: 0 0 14px; }
+
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+  .partner-head { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+  .partner-head img { height: 44px; width: auto; }
+  .partner-head a { font-size: 14px; }
+  .photo { border-radius: 6px; overflow: hidden; border: 1px solid var(--line); }
+  .caption { font-size: 13px; color: var(--muted); margin-top: 8px; }
+
+  .timeline { list-style: none; margin: 0; padding: 0; }
+  .timeline li { display: grid; grid-template-columns: 150px 1fr; gap: 16px; padding: 10px 0; border-bottom: 1px dashed var(--line); }
+  .timeline time { color: var(--navy); font-weight: 700; font-variant-numeric: tabular-nums; }
+
+  .clients { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; }
+  .clients li { background: #fff; border: 1px solid var(--line); border-radius: 6px; padding: 12px 14px; font-size: 15px; }
+
+  .brands { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; }
+  .brands figure { margin: 0; background: #fff; border: 1px solid var(--line); border-radius: 6px; height: 84px; display: flex; align-items: center; justify-content: center; padding: 12px; }
+  .brands img { max-height: 56px; width: auto; max-width: 100%; object-fit: contain; }
+
+  dl.company { display: grid; grid-template-columns: 140px 1fr; gap: 10px 20px; margin: 0; }
+  dl.company dt { color: var(--muted); font-size: 14px; padding-top: 2px; }
+  dl.company dd { margin: 0; }
+  .contact-cta { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn { display: inline-block; padding: 12px 20px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 15px; }
+  .btn-primary { background: var(--navy); color: #fff; }
+  .btn-ghost { border: 1px solid var(--navy); color: var(--navy); background: #fff; }
+
+  footer { padding: 28px 0 40px; color: var(--muted); font-size: 13px; border-top: 1px solid var(--line); }
+
+  @media (max-width: 760px) {
+    .nav { height: 56px; }
+    .brand span { display: none; }
+    nav ul { gap: 12px; }
+    nav a { font-size: 13px; white-space: nowrap; }
+    .hero { padding: 48px 0; }
+    .hero .wrap, .cols { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 24px; }
+    .timeline li { grid-template-columns: 1fr; gap: 2px; }
+    dl.company { grid-template-columns: 1fr; gap: 2px 0; }
+    dl.company dd { margin-bottom: 10px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">
+      <img src="img/logo.png" alt="TMY ロゴ">
+      <span>有限会社ティエムワイ</span>
+    </a>
+    <nav aria-label="ページ内メニュー">
+      <ul>
+        <li><a href="#multispares">Multispares</a></li>
+        <li><a href="#about">会社情報</a></li>
+        <li><a href="#brands">取扱ブランド</a></li>
+        <li><a href="#contact">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <span class="since">Since 1980 — Multispares Japan</span>
+        <h1>トラック部品を、日本からオーストラリア・ニュージーランドへ。</h1>
+        <p>ティエムワイは、1980年より Multispares の正規総代理店として、日本国内のメーカーや業者からトラック部品を調達し、Multispares へ輸出しています。</p>
+        <p>オーストラリア・ニュージーランド市場で確固たる地位を築く Multispares と連携し、信頼性の高い製品とサービスを提供いたします。</p>
+      </div>
+      <img src="img/office.jpg" alt="有限会社ティエムワイ 事務所外観（MULTISPARES JAPAN）" width="1403" height="920">
+    </div>
+  </div>
+
+  <section id="multispares">
+    <div class="wrap cols">
+      <div>
+        <h2>Multispares × ティエムワイ</h2>
+        <div class="partner-head">
+          <img src="img/multispares.png" alt="Multispares ロゴ">
+          <a href="https://www.multispares.com.au/" target="_blank" rel="noopener">www.multispares.com.au</a>
+        </div>
+        <p>Multispares は、オーストラリアおよびニュージーランド市場におけるトラック部品の大手サプライヤーです。1976年の創業以来、高品質な交換部品を輸入・供給し、業界をリードする存在として確かな実績を築いてきました。</p>
+        <p>同社は、欧州・日本・米国の主要なトラックメーカーに対応した幅広い部品を取り扱い、また、大型トレーラー部品やバス部品の分野においても、純正品の代替となる高品質な製品を提供しています。</p>
+        <p>現在、Multispares は 60,000 点以上のパーツを管理し、総額 5,000 万ドル相当の在庫を確保。オーストラリアおよびニュージーランド全域に展開する 24 の支店と複数の流通センターを通じて、迅速かつ安定した供給体制を整えています。また、約 50 台の自社配送車両を運用し、毎日約 3,000 件の注文処理を行うなど、高いサービス品質を誇ります。</p>
+        <p>Multispares は、「高品質な部品を、プロフェッショナルなサービスと競争力のある価格で提供する」という理念のもと、オーストラリア・ニュージーランド市場で確固たる地位を築いています。</p>
+      </div>
+      <div>
+        <div class="photo"><img src="img/team.jpg" alt="Multispares の皆さんと" width="1200" height="945"></div>
+        <p class="caption">Multispares の皆さんと</p>
+        <div class="photo" style="margin-top:18px"><img src="img/sign.jpg" alt="MULTISPARES JAPAN 看板" width="1200" height="900"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="soft">
+    <div class="wrap">
+      <h2>ティエムワイについて</h2>
+      <p>当社は、日本国内外の信頼ある企業と取引を行い、高品質な製品とサービスの提供を続けています。</p>
+
+      <div class="cols">
+        <div>
+          <h3>沿革</h3>
+          <ul class="timeline">
+            <li><time>1980年</time><span>玉屋産業 起業</span></li>
+            <li><time>1982年</time><span>Multispares 前身 James Carrow Inc とビジネススタート</span></li>
+            <li><time>1983年</time><span>Multispares</span></li>
+            <li><time>1994年8月8日</time><span>前身の玉屋産業から有限会社ティエムワイに社名変更</span></li>
+          </ul>
+        </div>
+        <div>
+          <h3>主要取引先（一部抜粋）</h3>
+          <ul class="clients">
+            <li>Multispares Australia</li>
+            <li>TBK株式会社</li>
+            <li>サンワ産業株式会社</li>
+            <li>MK Kashiyama</li>
+            <li>曙ブレーキ工業</li>
+            <li>いすゞ・日野・扶桑・UD 純正部品</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="brands">
+    <div class="wrap">
+      <h2>取り扱いブランド</h2>
+      <div class="brands">
+        <figure><img src="img/brands/tbk.png" alt="TBK"></figure>
+        <figure><img src="img/brands/akebono.jpg" alt="akebono"></figure>
+        <figure><img src="img/brands/sanwa.jpg" alt="サンワ産業"></figure>
+        <figure><img src="img/brands/nabtesco.png" alt="NABTESCO"></figure>
+        <figure><img src="img/brands/mhi.png" alt="MHI"></figure>
+        <figure><img src="img/brands/shimahide.png" alt="Shimahide"></figure>
+        <figure><img src="img/brands/nok.jpg" alt="NOK"></figure>
+        <figure><img src="img/brands/syslamp.jpg" alt="SYS Lamp"></figure>
+        <figure><img src="img/brands/mkkashiyama.jpg" alt="MK Kashiyama"></figure>
+        <figure><img src="img/brands/tamathermo.jpg" alt="Tama Thermo"></figure>
+        <figure><img src="img/brands/daidometal.jpg" alt="Daido Metal"></figure>
+        <figure><img src="img/brands/rikenpiston.gif" alt="Riken Piston Ring"></figure>
+        <figure><img src="img/brands/astemo.jpg" alt="Astemo"></figure>
+        <figure><img src="img/brands/tkk.jpg" alt="TKK"></figure>
+        <figure><img src="img/brands/denso.jpg" alt="DENSO"></figure>
+        <figure><img src="img/brands/marushin.png" alt="Marushin"></figure>
+        <figure><img src="img/brands/hilex.jpg" alt="HI-LEX"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="soft">
+    <div class="wrap cols">
+      <div>
+        <h2>会社概要・お問い合わせ</h2>
+        <dl class="company">
+          <dt>社名</dt><dd>有限会社ティエムワイ（TMY Co., Ltd.）</dd>
+          <dt>所在地</dt><dd>〒675-1380 兵庫県小野市中島町364-1</dd>
+          <dt>TEL</dt><dd><a href="tel:0794622200">0794-62-2200</a></dd>
+          <dt>FAX</dt><dd>0794-62-3055</dd>
+          <dt>メール</dt><dd><a href="mailto:contact@tmyltd.jp">contact@tmyltd.jp</a></dd>
+          <dt>営業時間</dt><dd>平日 9:30～17:00</dd>
+          <dt>社員数</dt><dd>4名</dd>
+          <dt>売上</dt><dd>8億円（2024年度決算）</dd>
+        </dl>
+        <div class="contact-cta">
+          <a class="btn btn-primary" href="mailto:contact@tmyltd.jp">メールで問い合わせる</a>
+          <a class="btn btn-ghost" href="tel:0794622200">電話をかける</a>
+        </div>
+      </div>
+      <div>
+        <div class="photo"><img src="img/office.jpg" alt="事務所外観" width="1403" height="920" loading="lazy"></div>
+        <p class="caption">兵庫県小野市中島町364-1</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">© 2025 TMY CO., LTD.</div>
+</footer>
+
+</body>
+</html>
